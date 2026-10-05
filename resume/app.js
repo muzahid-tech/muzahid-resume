@@ -10,6 +10,7 @@
      ======================================================= */
   const STORAGE_KEY   = 'muzahidul.resume.data.v1';
   const PHOTO_KEY     = 'muzahidul.resume.photo.v1';
+  const WEBSITE_MIGRATION_KEY = 'muzahidul.resume.website-default.v1';
   const DEFAULT_PHOTO = 'assets/image/profile.png';
   const ICON_SUGGESTIONS = [
     'fa-solid fa-book-open','fa-solid fa-pen-nib','fa-solid fa-clipboard-list',
@@ -63,7 +64,7 @@
       address:    'No 2 Kuwari Pukhuri, Kharupetia, Darrang, Assam, India - 784115',
       phone:      '+91 91012 14304',
       email:      'muzahid.tech.edu@gmail.com',
-      website:    '',
+      website:    'https://muzahid-tech.github.io/Muzahid_The_Tech_Master/',
       linkedin:   'muzahid-tech',
       github:     'muzahid-tech'
     },
@@ -532,7 +533,8 @@
 
     if (p.website) {
       const url = /^https?:\/\//i.test(p.website) ? p.website : 'https://' + p.website;
-      items.push({ icon: 'fa-solid fa-globe', text: p.website, href: url, external: true });
+      const text = p.website.replace(/^https?:\/\//i, '').replace(/\/+$/, '');
+      items.push({ icon: 'fa-solid fa-globe', text, href: url, external: true });
     }
 
     if (p.linkedin) {
@@ -1557,6 +1559,14 @@
       }
     } else {
       state.data = clone(DEFAULT_DATA);
+    }
+
+    if (raw && !store.get(WEBSITE_MIGRATION_KEY)) {
+      if (!state.data.personal.website) {
+        state.data.personal.website = DEFAULT_DATA.personal.website;
+        store.set(STORAGE_KEY, JSON.stringify(state.data));
+      }
+      store.set(WEBSITE_MIGRATION_KEY, '1');
     }
 
     state.data.skills = normalizeSkillGroups(state.data.skills);
