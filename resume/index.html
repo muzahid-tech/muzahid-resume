@@ -1,256 +1,1242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#1f4e79">
-<title>Muzahidul Islam — Principal · Educator · Engineer</title>
-<meta name="description" content="Professional resume of Muzahidul Islam — Principal, English Educator, Computer Science Professional and Software Engineer. MCA, MA in English.">
-<meta name="author" content="Muzahidul Islam">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzahidul Islam — Executive Resume</title>
 
-<!-- ============ GOOGLE FONTS ============ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
-<!-- ============ FONT AWESOME (LOCAL / OFFLINE) ============ -->
-<link rel="stylesheet" href="library/fontawesome/css/all.min.css">
+    <!-- Font Awesome 6.4 Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="style.css">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy:        #0b1c3d;
+            --navy-soft:   #17325f;
+            --gold:        #f6b93b;
+            --gold-light:  #ffd166;
+            --teal:        #0fb9c9;
+            --coral:       #ff6b6b;
+            --violet:      #8b5cf6;
+            --green:       #22c55e;
+            --pink:        #ec4899;
+            --ink:         #1b2437;
+            --muted:       #5b6b85;
+            --line:        #e7ecf3;
+            --bg-soft:     #f7f9fc;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #eef2f9 0%, #e2e9f6 50%, #eef2f9 100%);
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .ic-gold   { background: linear-gradient(135deg, #ffd166, #f0a500); }
+        .ic-teal   { background: linear-gradient(135deg, #4fd8e8, #0fb9c9); }
+        .ic-coral  { background: linear-gradient(135deg, #ff9a8b, #ff6b6b); }
+        .ic-violet { background: linear-gradient(135deg, #b39dff, #8b5cf6); }
+        .ic-green  { background: linear-gradient(135deg, #7ee8a2, #22c55e); }
+        .ic-pink   { background: linear-gradient(135deg, #ff9ad5, #ec4899); }
+
+        .resume-wrapper {
+            max-width: 1060px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(11, 28, 61, 0.14), 0 8px 24px rgba(11, 28, 61, 0.06);
+            overflow: hidden;
+            transition: all 0.35s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .resume-wrapper:hover {
+            box-shadow: 0 28px 75px rgba(11, 28, 61, 0.18);
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            min-height: 1100px;
+        }
+
+        /* ============== SIDEBAR ============== */
+        .sidebar {
+            background: linear-gradient(165deg, #0b1c3d 0%, #17325f 48%, #0b1c3d 100%);
+            color: #e8edf5;
+            padding: 38px 26px 34px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 25%, rgba(15, 185, 201, 0.12) 0%, transparent 60%),
+                        radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .sidebar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #0fb9c9, #f6b93b, #ff6b6b, #8b5cf6, #0fb9c9);
+            background-size: 300% 100%;
+            animation: shimmerBorder 5s linear infinite;
+        }
+
+        @keyframes shimmerBorder {
+            0%   { background-position: 0% 0%; }
+            100% { background-position: 300% 0%; }
+        }
+
+        .avatar {
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd166 0%, #f6b93b 50%, #ff8f5e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: #0b1c3d;
+            box-shadow: 0 10px 34px rgba(246, 185, 59, 0.42), 0 0 0 4px rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidebar-name {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 23px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            color: #ffffff;
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidebar-title {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 10.5px;
+            font-weight: 500;
+            color: #7fe3ee;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidebar-section { margin-bottom: 24px; position: relative; z-index: 1; }
+
+        .sidebar-section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: #ffffff;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .sidebar-section-title i {
+            width: 22px;
+            height: 22px;
+            border-radius: 7px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #0b1c3d;
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, 0.88);
+            padding: 5px 0;
+            transition: all 0.2s ease;
+        }
+
+        .contact-item:hover { color: var(--gold-light); transform: translateX(3px); }
+
+        .contact-item i {
+            width: 16px;
+            font-size: 12px;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .contact-item a { color: inherit; text-decoration: none; word-break: break-word; }
+        .contact-item a:hover { color: var(--gold-light); }
+
+        .skill-bar-group { margin-bottom: 14px; }
+
+        .skill-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 4px;
+        }
+
+        .skill-bar-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill { height: 100%; border-radius: 10px; animation: fillBar 1.5s ease forwards; }
+
+        .fill-gold   { background: linear-gradient(90deg, #ffd166, #f0a500); }
+        .fill-teal   { background: linear-gradient(90deg, #4fd8e8, #0fb9c9); }
+        .fill-violet { background: linear-gradient(90deg, #b39dff, #8b5cf6); }
+        .fill-green  { background: linear-gradient(90deg, #7ee8a2, #22c55e); }
+        .fill-coral  { background: linear-gradient(90deg, #ff9a8b, #ff6b6b); }
+
+        .sidebar-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+        .sidebar-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 4px 13px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            transition: all 0.25s ease;
+        }
+
+        .sidebar-tag i {
+            font-size: 10px;
+            color: var(--gold-light);
+            transition: color 0.25s ease;
+        }
+
+        .sidebar-tag:hover {
+            background: linear-gradient(135deg, #ffd166, #f0a500);
+            border-color: transparent;
+            color: #0b1c3d;
+            font-weight: 600;
+            transform: translateY(-1px);
+        }
+
+        .sidebar-tag:hover i { color: #0b1c3d; }
+
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .lang-item:last-child { border-bottom: none; }
+
+        .lang-level { color: var(--gold-light); font-weight: 600; font-size: 10.5px; }
+
+        .cert-item {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.88);
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .cert-item i { color: var(--green); font-size: 11px; flex-shrink: 0; }
+
+        /* ============== MAIN CONTENT ============== */
+        .main-content { padding: 40px 44px 36px 40px; background: #ffffff; }
+
+        .main-header {
+            margin-bottom: 26px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--line);
+            position: relative;
+        }
+
+        .main-header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 130px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #0fb9c9, #f6b93b, #ff6b6b, #8b5cf6);
+        }
+
+        .main-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+
+        .main-header h1 span {
+            background: linear-gradient(120deg, #0b1c3d 0%, #1e3a8a 55%, #0fb9c9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .main-header .subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--muted);
+            margin-top: 8px;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .main-header .subtitle .dot { color: var(--gold); font-size: 16px; }
+        .main-header .subtitle .highlight-1 { color: #0e9aab; }
+        .main-header .subtitle .highlight-2 { color: #7c4dff; }
+        .main-header .subtitle .highlight-3 { color: #e85d5d; }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            margin-top: 28px;
+            margin-bottom: 14px;
+            padding-bottom: 9px;
+            border-bottom: 2px solid var(--line);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            border-radius: 2px;
+            background: var(--accent, #f6b93b);
+        }
+
+        .section-title i {
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #ffffff;
+            background: var(--accent, #f6b93b);
+            box-shadow: 0 4px 12px rgba(11, 28, 61, 0.14);
+            flex-shrink: 0;
+        }
+
+        .profile-text {
+            font-size: 12px;
+            line-height: 1.85;
+            color: #2d3748;
+            text-align: justify;
+            padding: 0 2px;
+        }
+
+        .profile-text strong { color: var(--navy); font-weight: 700; }
+
+        .exp-item {
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 3px solid #eef2f8;
+            transition: all 0.25s ease;
+        }
+
+        .exp-item:hover {
+            border-left-color: var(--gold);
+            background: linear-gradient(90deg, rgba(246, 185, 59, 0.06), transparent 70%);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px 8px;
+        }
+
+        .exp-position {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .exp-position i { color: var(--gold); font-size: 12px; margin-right: 7px; }
+
+        .exp-date {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #8a5a00;
+            background: linear-gradient(135deg, #fff8e6, #ffedbf);
+            padding: 3px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            border: 1px solid rgba(246, 185, 59, 0.35);
+        }
+
+        .exp-date i { margin-right: 4px; color: #d99a00; }
+
+        .exp-company {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #41546f;
+            margin-top: 2px;
+            margin-bottom: 6px;
+        }
+
+        .exp-company i { color: var(--teal); font-size: 11px; margin-right: 7px; }
+
+        .exp-points { list-style: none; padding-left: 4px; }
+
+        .exp-points li {
+            font-size: 11.5px;
+            line-height: 1.75;
+            color: #2d3748;
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+
+        .exp-points li::before {
+            content: "\f111";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 5px;
+            color: var(--gold);
+            position: absolute;
+            left: 3px;
+            top: 8px;
+        }
+
+        .exp-points li strong { color: var(--navy); font-weight: 700; }
+
+        /* ============== EDUCATION (bulletproof logo fallback) ============== */
+        .edu-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+            padding: 12px 16px;
+            background: var(--bg-soft);
+            border-left: 3px solid #c9b6ff;
+            border-radius: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .edu-item:hover {
+            background: #f0f4fa;
+            border-left-color: var(--violet);
+            transform: translateX(4px);
+            box-shadow: 0 4px 16px rgba(11, 28, 61, 0.08);
+        }
+
+        .edu-logo {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #e7ecf3;
+            box-shadow: 0 2px 8px rgba(11, 28, 61, 0.06);
+            overflow: hidden;
+        }
+
+        /* Font Awesome icon hidden under the image — always visible if image fails */
+        .edu-logo .edu-fallback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+            color: var(--violet);
+            z-index: 0;
+            line-height: 1;
+        }
+
+        .edu-logo img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #ffffff;
+            padding: 5px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .edu-content { flex: 1; min-width: 0; }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px 8px;
+        }
+
+        .edu-institution {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .edu-year {
+            font-size: 10.5px;
+            color: #6b5bb5;
+            font-weight: 600;
+            background: rgba(139, 92, 246, 0.10);
+            padding: 2px 12px;
+            border-radius: 20px;
+        }
+
+        .edu-degree { font-size: 11.5px; color: #4a5568; margin-top: 2px; }
+
+        /* ============== SKILLS ============== */
+        .skill-category {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-top: 13px;
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .skill-category i {
+            width: 22px;
+            height: 22px;
+            border-radius: 7px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #ffffff;
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(11, 28, 61, 0.15);
+        }
+
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 2px; }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10.5px;
+            color: #2d3748;
+            background: #f2f6fb;
+            padding: 4px 14px 4px 11px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.25s ease;
+            font-weight: 500;
+        }
+
+        .skill-tag i {
+            font-size: 10px;
+            color: var(--violet);
+            transition: color 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, #17325f, #0b1c3d);
+            color: #ffffff;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(11, 28, 61, 0.25);
+        }
+
+        .skill-tag:hover i { color: var(--gold-light); }
+
+        .strength-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+
+        .strength-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 10.5px;
+            font-weight: 600;
+            padding: 5px 16px 5px 13px;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+        }
+
+        .strength-tag i { font-size: 10px; flex-shrink: 0; }
+
+        .strength-tag:nth-child(3n+1) {
+            background: linear-gradient(135deg, #fff5d9, #ffe4a6);
+            color: #8a5a00;
+            border-color: #ffd166;
+        }
+        .strength-tag:nth-child(3n+1) i { color: #d99a00; }
+
+        .strength-tag:nth-child(3n+2) {
+            background: linear-gradient(135deg, #e1f8fb, #bdeef5);
+            color: #05606d;
+            border-color: #7fdbe8;
+        }
+        .strength-tag:nth-child(3n+2) i { color: #0e9aab; }
+
+        .strength-tag:nth-child(3n+3) {
+            background: linear-gradient(135deg, #f5ecff, #e4d3ff);
+            color: #5b21b6;
+            border-color: #c4a8ff;
+        }
+        .strength-tag:nth-child(3n+3) i { color: #7c4dff; }
+
+        .strength-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(11, 28, 61, 0.16);
+            filter: saturate(1.4);
+        }
+
+        .ref-text {
+            font-size: 11.5px;
+            color: #4a5568;
+            font-style: italic;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .ref-text i { color: var(--pink); margin-right: 9px; font-size: 13px; }
+
+        /* ============== PRINT BUTTON ============== */
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #0b1c3d, #17325f 55%, #8b5cf6 130%);
+            color: #ffffff;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 32px rgba(11, 28, 61, 0.42);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .print-btn i { font-size: 16px; color: var(--gold-light); }
+        .print-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 46px rgba(11, 28, 61, 0.55); }
+        .print-btn:active { transform: scale(0.97); }
+
+        /* ============== PRINT ============== */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            body { background: #ffffff; padding: 0; margin: 0; }
+            .resume-wrapper { box-shadow: none; border-radius: 0; max-width: 100%; animation: none; }
+            .resume-grid { min-height: auto; }
+            .print-btn { display: none !important; }
+            .sidebar::after { display: none; }
+            .main-content { padding: 35px 40px 30px 35px; }
+        }
+
+        /* ============== RESPONSIVE ============== */
+        @media (max-width: 860px) {
+            .resume-grid { grid-template-columns: 1fr; }
+            .sidebar { padding: 30px 24px 28px; }
+            .main-content { padding: 28px 24px 25px; }
+            .avatar { width: 92px; height: 92px; font-size: 34px; }
+            .main-header h1 { font-size: 29px; }
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 16px 8px; }
+            .main-content { padding: 18px 15px 20px; }
+            .sidebar { padding: 22px 16px 20px; }
+            .main-header h1 { font-size: 23px; }
+            .main-header .subtitle { font-size: 11.5px; }
+            .exp-header, .edu-header { flex-direction: column; align-items: flex-start; }
+            .print-btn {
+                bottom: 12px; right: 12px;
+                padding: 12px 18px;
+                font-size: 12px;
+                border-radius: 40px;
+            }
+            .print-btn span { display: none; }
+            .skill-tag { font-size: 9.5px; padding: 3px 10px 3px 8px; gap: 5px; }
+            .skill-tag i { font-size: 9px; }
+            .strength-tag { font-size: 9.5px; padding: 4px 12px 4px 10px; gap: 5px; }
+            .strength-tag i { font-size: 9px; }
+            .sidebar-tag { font-size: 9.5px; padding: 3px 11px; gap: 5px; }
+            .sidebar-tag i { font-size: 9px; }
+            .edu-logo { width: 40px; height: 40px; }
+            .edu-logo .edu-fallback { font-size: 18px; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fillBar {
+            from { width: 0%; }
+            to   { width: var(--fill-width); }
+        }
+    </style>
 </head>
-
 <body>
 
-<a class="skip-link" href="#resumeRoot">Skip to resume content</a>
+    <div class="resume-wrapper">
+        <div class="resume-grid">
 
-<!-- =========================================================
-     TOP TOOLBAR  (application UI — never printed)
-     ========================================================= -->
-<header class="toolbar no-print" role="banner">
-  <div class="toolbar__brand">
-    <span class="toolbar__mark" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></span>
-    <span class="toolbar__titles">
-      <strong>Resume Studio</strong>
-      <small id="brandSub">Muzahidul Islam</small>
-    </span>
-  </div>
+            <!-- ================= SIDEBAR ================= -->
+            <div class="sidebar">
 
-  <nav class="toolbar__nav" aria-label="Resume controls">
-    <button id="btnEditToggle" class="btn btn--primary" type="button"
-            aria-pressed="false" aria-label="Edit resume">
-      <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
-      <span id="btnEditLabel">Edit Resume</span>
-    </button>
+                <div class="avatar">MI</div>
+                <div class="sidebar-name">MUZAHIDUL ISLAM</div>
+                <div class="sidebar-title">Educator &middot; Engineer</div>
 
-    <button id="btnPrint" class="btn" type="button" aria-label="Print resume">
-      <i class="fa-solid fa-print" aria-hidden="true"></i><span>Print</span>
-    </button>
+                <!-- Contact -->
+                <div class="sidebar-section">
+                    <div class="sidebar-section-title">
+                        <i class="fa fa-address-card ic-teal"></i> Contact
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <span>No 2 Kuwari Pukhuri, Kharupetia, Darrang, Assam, India - 784115</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:+919101214304">+91 91012 14304</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:contact@muzahid.online">contact@muzahid.online</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <a href="#" target="_blank">muzahid-tech</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="#" target="_blank">muzahid-tech</a>
+                    </div>
+                </div>
 
-    <button id="btnPdf" class="btn" type="button" aria-label="Save resume as PDF">
-      <i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span>Save PDF</span>
-    </button>
+                <!-- Core Competencies -->
+                <div class="sidebar-section">
+                    <div class="sidebar-section-title">
+                        <i class="fa fa-star ic-gold"></i> Core Competencies
+                    </div>
+                    <div class="sidebar-tags">
+                        <span class="sidebar-tag"><i class="fa fa-crown"></i> Educational Leadership</span>
+                        <span class="sidebar-tag"><i class="fa fa-layer-group"></i> Full-Stack Dev</span>
+                        <span class="sidebar-tag"><i class="fa fa-robot"></i> AI Integration</span>
+                        <span class="sidebar-tag"><i class="fa fa-list-check"></i> Project Management</span>
+                        <span class="sidebar-tag"><i class="fa fa-laptop"></i> Digital Education</span>
+                        <span class="sidebar-tag"><i class="fa fa-cloud"></i> Cloud Computing</span>
+                    </div>
+                </div>
 
-    <button id="btnShare" class="btn" type="button" aria-label="Share resume"
-            aria-haspopup="true" aria-expanded="false" aria-controls="shareMenu">
-      <i class="fa-solid fa-share-nodes" aria-hidden="true"></i><span>Share</span>
-    </button>
-  </nav>
-</header>
+                <!-- Technical Skills -->
+                <div class="sidebar-section">
+                    <div class="sidebar-section-title">
+                        <i class="fa fa-code ic-green"></i> Technical Skills
+                    </div>
 
-<!-- =========================================================
-     RESUME DOCUMENT
-     ========================================================= -->
-<main class="resume-root" id="resumeRoot">
+                    <div class="skill-bar-group">
+                        <div class="skill-bar-label"><span>Full-Stack Development</span><span>92%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill fill-gold" style="--fill-width: 92%; width: 92%;"></div></div>
+                    </div>
 
-  <!-- ---------------- COVER PAGE ---------------- -->
-  <section class="page cover-page" id="coverPage" aria-label="Resume cover page">
-    <div class="cover__band" aria-hidden="true"></div>
+                    <div class="skill-bar-group">
+                        <div class="skill-bar-label"><span>AI &amp; Automation</span><span>85%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill fill-violet" style="--fill-width: 85%; width: 85%;"></div></div>
+                    </div>
 
-    <div class="cover__inner">
-      <div class="cover__photo-wrap">
-        <img id="coverPhoto" class="cover__photo" src="assets/image/profile.png"
-             alt="Portrait of Muzahidul Islam">
-      </div>
+                    <div class="skill-bar-group">
+                        <div class="skill-bar-label"><span>Cloud &amp; DevOps</span><span>78%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill fill-teal" style="--fill-width: 78%; width: 78%;"></div></div>
+                    </div>
 
-      <h1 class="cover__name" id="coverName">MUZAHIDUL ISLAM</h1>
-      <p class="cover__title" id="coverTitle">PRINCIPAL · EDUCATOR · ENGINEER</p>
+                    <div class="skill-bar-group">
+                        <div class="skill-bar-label"><span>Database Management</span><span>88%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill fill-green" style="--fill-width: 88%; width: 88%;"></div></div>
+                    </div>
 
-      <div class="cover__rule" aria-hidden="true"></div>
+                    <div class="skill-bar-group">
+                        <div class="skill-bar-label"><span>Digital Marketing</span><span>75%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill fill-coral" style="--fill-width: 75%; width: 75%;"></div></div>
+                    </div>
+                </div>
 
-      <p class="cover__identity" id="coverIdentity"></p>
-      <p class="cover__statement" id="coverStatement"></p>
+                <!-- Languages -->
+                <div class="sidebar-section">
+                    <div class="sidebar-section-title">
+                        <i class="fa fa-language ic-violet"></i> Languages
+                    </div>
+                    <div class="lang-item"><span>English</span><span class="lang-level">Fluent</span></div>
+                    <div class="lang-item"><span>Assamese</span><span class="lang-level">Fluent</span></div>
+                    <div class="lang-item"><span>Bengali</span><span class="lang-level">Fluent</span></div>
+                    <div class="lang-item"><span>Hindi</span><span class="lang-level">Fluent</span></div>
+                </div>
 
-      <ul class="cover__contact" id="coverContact"></ul>
+                <!-- Certifications -->
+                <div class="sidebar-section">
+                    <div class="sidebar-section-title">
+                        <i class="fa fa-certificate ic-coral"></i> Certifications
+                    </div>
+                    <div class="cert-item"><i class="fa fa-check-circle"></i> Bisharad – Hindi</div>
+                    <div class="cert-item"><i class="fa fa-check-circle"></i> PGDCA – CCERT</div>
+                    <div class="cert-item"><i class="fa fa-check-circle"></i> Digital Marketing – LinkedIn</div>
+                    <div class="cert-item"><i class="fa fa-check-circle"></i> Cyber Security – SkillUp</div>
+                    <div class="cert-item"><i class="fa fa-check-circle"></i> Ethical Hacking – Programming Hub</div>
+                    <div class="cert-item"><i class="fa fa-check-circle"></i> EA Supervisor – NSEIT</div>
+                </div>
+
+            </div>
+
+            <!-- ================= MAIN ================= -->
+            <div class="main-content">
+
+                <!-- Header -->
+                <div class="main-header">
+                    <h1><span>MUZAHIDUL ISLAM</span></h1>
+                    <div class="subtitle">
+                        <span class="highlight-1">English Educator</span>
+                        <span class="dot">&#9679;</span>
+                        <span class="highlight-2">Computer Science Professional</span>
+                        <span class="dot">&#9679;</span>
+                        <span class="highlight-3">Software Engineer</span>
+                    </div>
+                </div>
+
+                <!-- Profile -->
+                <div class="section-title" style="--accent:#0fb9c9;">
+                    <i class="fa fa-user"></i> Professional Profile
+                </div>
+                <p class="profile-text">
+                    <strong>MCA</strong> and <strong>MA in English</strong> qualified education professional with
+                    extensive experience in academic leadership, English teaching, Computer Science education, and
+                    software development. Currently serving as <strong>Principal and English Teacher</strong> at
+                    Darrang Royal Academy (DRA). Combines deep expertise in English grammar and literature,
+                    academic writing, school management, digital education, programming, web development,
+                    databases, APIs, AI tools, and emerging technologies. Committed to strengthening academic
+                    standards through disciplined leadership, technology-enabled learning, and practical,
+                    project-based education.
+                </p>
+
+                <!-- Experience -->
+                <div class="section-title" style="--accent:#f6b93b;">
+                    <i class="fa fa-briefcase"></i> Professional Experience
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-position"><i class="fa fa-graduation-cap"></i>Principal &amp; English Teacher</span>
+                        <span class="exp-date"><i class="fa fa-calendar-alt"></i> Present</span>
+                    </div>
+                    <div class="exp-company"><i class="fa fa-building"></i>Darrang Royal Academy (DRA), Darrang, Assam</div>
+                    <ul class="exp-points">
+                        <li>Provide academic and administrative leadership, overseeing school operations, academic planning, teacher coordination, student discipline, and institutional development.</li>
+                        <li>Lead English instruction in Grammar, Literature, Writing, Reading, and Comprehension while supporting academic performance and examination preparation.</li>
+                        <li>Promote digital classrooms, modern teaching practices, effective school management, and improved student engagement and learning outcomes.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-position"><i class="fa fa-graduation-cap"></i>English Teacher</span>
+                        <span class="exp-date"><i class="fa fa-calendar-alt"></i> 2024 – 2026</span>
+                    </div>
+                    <div class="exp-company"><i class="fa fa-building"></i>Lakhimpur Markaz Academy (Super - 40), Lakhimpur, Assam</div>
+                    <ul class="exp-points">
+                        <li>Taught English Grammar, Literature, Writing, Reading, and Comprehension, preparing lesson plans, study materials, assignments, and assessments.</li>
+                        <li>Guided students in examination preparation, monitored academic progress, and helped improve communication, writing, vocabulary, and overall English proficiency.</li>
+                        <li>Promoted interactive and digital teaching methods, maintained classroom discipline, and supported student engagement and effective learning outcomes.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-position"><i class="fa fa-chalkboard-user"></i>English Teacher &amp; Computer Science Teacher</span>
+                        <span class="exp-date"><i class="fa fa-calendar-alt"></i> 2023 – 2024</span>
+                    </div>
+                    <div class="exp-company"><i class="fa fa-building"></i>Creative Mission Academy, Donbosco</div>
+                    <ul class="exp-points">
+                        <li>Delivered English and Computer Science instruction across middle and secondary levels, covering grammar, literature, programming fundamentals, computer applications, and practical computer skills.</li>
+                        <li>Implemented activity-based and project-based learning through laboratory sessions, coding demonstrations, debates, speech programmes, and writing workshops.</li>
+                        <li>Used digital and interactive teaching methods, contributing to approximately <strong>25% improvement</strong> in students' practical examination results.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-position"><i class="fa fa-laptop-code"></i>Software Engineering Intern</span>
+                        <span class="exp-date"><i class="fa fa-calendar-alt"></i> 2022 – 2024</span>
+                    </div>
+                    <div class="exp-company"><i class="fa fa-building"></i>Eurofins IT Solution</div>
+                    <ul class="exp-points">
+                        <li>Developed responsive and user-friendly websites and web applications using HTML, CSS, JavaScript, PHP, and related web technologies.</li>
+                        <li>Worked across frontend, backend, database, and API integration to develop functional web application features.</li>
+                        <li>Improved usability, responsiveness, and performance while supporting testing, debugging, maintenance, and ongoing development.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-position"><i class="fa fa-code"></i>Website Developer</span>
+                        <span class="exp-date"><i class="fa fa-calendar-alt"></i> 2021 – 2022</span>
+                    </div>
+                    <div class="exp-company"><i class="fa fa-building"></i>Fidelity Investments India</div>
+                    <ul class="exp-points">
+                        <li>Supported software engineering and application development projects involving coding, frontend and backend development, and database-related tasks.</li>
+                        <li>Participated in the software development lifecycle, including development, testing, debugging, and technical problem-solving.</li>
+                        <li>Collaborated with development teams using version control, code maintenance, testing, and documentation practices.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-position"><i class="fa fa-video"></i>Online English Tutor</span>
+                        <span class="exp-date"><i class="fa fa-calendar-alt"></i> 2019 – 2021</span>
+                    </div>
+                    <div class="exp-company"><i class="fa fa-building"></i>Dhula Public Academy</div>
+                    <ul class="exp-points">
+                        <li>Delivered online English classes using virtual teaching tools and customized lessons based on student learning needs.</li>
+                        <li>Taught grammar, literature, writing, reading, and comprehension to improve participation and academic performance.</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="section-title" style="--accent:#8b5cf6;">
+                    <i class="fa fa-university"></i> Education
+                </div>
+
+                <!-- IGNOU -->
+                <div class="edu-item">
+                    <div class="edu-logo">
+                        <i class="fa fa-graduation-cap edu-fallback"></i>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/IGNOU_logo.svg/240px-IGNOU_logo.svg.png"
+                             alt="" onerror="this.style.display='none'">
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <span class="edu-institution">IGNOU</span>
+                            <span class="edu-year">2026</span>
+                        </div>
+                        <div class="edu-degree">Master of Arts (MA) in English</div>
+                    </div>
+                </div>
+
+                <!-- Bengaluru University -->
+                <div class="edu-item">
+                    <div class="edu-logo">
+                        <i class="fa fa-building-columns edu-fallback"></i>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Bangalore_University_logo.png/200px-Bangalore_University_logo.png"
+                             alt="" onerror="this.style.display='none'">
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <span class="edu-institution">Bengaluru University</span>
+                            <span class="edu-year">2023 – 2025</span>
+                        </div>
+                        <div class="edu-degree">Master of Computer Applications (MCA)</div>
+                    </div>
+                </div>
+
+                <!-- WAP Institute -->
+                <div class="edu-item">
+                    <div class="edu-logo">
+                        <i class="fa fa-microchip edu-fallback" style="color:#f6b93b;"></i>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <span class="edu-institution">WAP Institute</span>
+                            <span class="edu-year">2021 – 2023</span>
+                        </div>
+                        <div class="edu-degree">Software Engineering with CIT</div>
+                    </div>
+                </div>
+
+                <!-- Manipal University Jaipur -->
+                <div class="edu-item">
+                    <div class="edu-logo">
+                        <i class="fa fa-university edu-fallback"></i>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Manipal_University_Jaipur_logo.png/220px-Manipal_University_Jaipur_logo.png"
+                             alt="" onerror="this.style.display='none'">
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <span class="edu-institution">Manipal University Jaipur</span>
+                            <span class="edu-year">2019 – 2022</span>
+                        </div>
+                        <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+                    </div>
+                </div>
+
+                <!-- Kharupetia College -->
+                <div class="edu-item">
+                    <div class="edu-logo">
+                        <i class="fa fa-book edu-fallback"></i>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Placeholder_view_vector.svg/200px-Placeholder_view_vector.svg.png"
+                             alt="" onerror="this.style.display='none'">
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <span class="edu-institution">Kharupetia College</span>
+                            <span class="edu-year">2015 – 2018</span>
+                        </div>
+                        <div class="edu-degree">Bachelor of Arts in English</div>
+                    </div>
+                </div>
+
+                <!-- Core Skills -->
+                <div class="section-title" style="--accent:#ff6b6b;">
+                    <i class="fa fa-tools"></i> Core Skills
+                </div>
+
+                <!-- Teaching & Leadership -->
+                <div class="skill-category"><i class="fa fa-chalkboard ic-teal"></i> Teaching &amp; Leadership</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa fa-book-open"></i> English Grammar &amp; Literature</span>
+                    <span class="skill-tag"><i class="fa fa-pen-fancy"></i> Academic Writing</span>
+                    <span class="skill-tag"><i class="fa fa-clipboard-list"></i> Lesson Planning</span>
+                    <span class="skill-tag"><i class="fa fa-file-pen"></i> Examination Preparation</span>
+                    <span class="skill-tag"><i class="fa fa-chalkboard-user"></i> Classroom Management</span>
+                    <span class="skill-tag"><i class="fa fa-check-double"></i> Student Assessment</span>
+                    <span class="skill-tag"><i class="fa fa-user-graduate"></i> Student Mentoring</span>
+                    <span class="skill-tag"><i class="fa fa-calendar-check"></i> Academic Planning</span>
+                    <span class="skill-tag"><i class="fa fa-school"></i> School Management</span>
+                    <span class="skill-tag"><i class="fa fa-crown"></i> Educational Leadership</span>
+                </div>
+
+                <!-- Educational Technology -->
+                <div class="skill-category"><i class="fa fa-laptop ic-violet"></i> Educational Technology</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa fa-laptop"></i> Digital Education</span>
+                    <span class="skill-tag"><i class="fa fa-chalkboard"></i> Digital Classroom</span>
+                    <span class="skill-tag"><i class="fa fa-book"></i> Digital Notebook</span>
+                    <span class="skill-tag"><i class="fa fa-microchip"></i> ICT-Based Learning</span>
+                    <span class="skill-tag"><i class="fa fa-diagram-project"></i> Project-Based Learning</span>
+                    <span class="skill-tag"><i class="fa fa-computer"></i> Computer Science Teaching</span>
+                    <span class="skill-tag"><i class="fa fa-desktop"></i> Computer Laboratory Instruction</span>
+                </div>
+
+                <!-- Software Engineering -->
+                <div class="skill-category"><i class="fa fa-code ic-gold"></i> Software Engineering</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa fa-layer-group"></i> Full-Stack Development</span>
+                    <span class="skill-tag"><i class="fa fa-server"></i> Frontend &amp; Backend</span>
+                    <span class="skill-tag"><i class="fa fa-globe"></i> Web Applications</span>
+                    <span class="skill-tag"><i class="fa fa-mobile-screen"></i> Mobile Development</span>
+                    <span class="skill-tag"><i class="fa fa-bug"></i> Software Testing &amp; Debugging</span>
+                    <span class="skill-tag"><i class="fa fa-list-check"></i> Project Management</span>
+                    <span class="skill-tag"><i class="fa fa-file-code"></i> Technical Documentation</span>
+                </div>
+
+                <!-- Technologies -->
+                <div class="skill-category"><i class="fa fa-globe ic-green"></i> Technologies</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="skill-tag"><i class="fa fa-code"></i> jQuery</span>
+                    <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    <span class="skill-tag"><i class="fa fa-wind"></i> Tailwind CSS</span>
+                    <span class="skill-tag"><i class="fab fa-react"></i> React.js</span>
+                    <span class="skill-tag"><i class="fab fa-angular"></i> Angular</span>
+                    <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                    <span class="skill-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                    <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> ASP.NET</span>
+                    <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                    <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                    <span class="skill-tag"><i class="fab fa-android"></i> Kotlin</span>
+                    <span class="skill-tag"><i class="fa fa-hashtag"></i> C#</span>
+                    <span class="skill-tag"><i class="fab fa-swift"></i> Swift</span>
+                </div>
+
+                <!-- Data, API & Cloud -->
+                <div class="skill-category"><i class="fa fa-database ic-coral"></i> Data, API &amp; Cloud</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa fa-database"></i> MySQL</span>
+                    <span class="skill-tag"><i class="fa fa-leaf"></i> MongoDB</span>
+                    <span class="skill-tag"><i class="fa fa-database"></i> Database Integration</span>
+                    <span class="skill-tag"><i class="fa fa-plug"></i> REST API</span>
+                    <span class="skill-tag"><i class="fa fa-plug-circle-bolt"></i> API Integration</span>
+                    <span class="skill-tag"><i class="fab fa-aws"></i> AWS Cloud</span>
+                    <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                </div>
+
+                <!-- AI & Automation -->
+                <div class="skill-category"><i class="fa fa-robot ic-violet"></i> AI &amp; Automation</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa fa-wand-magic-sparkles"></i> Generative AI</span>
+                    <span class="skill-tag"><i class="fa fa-robot"></i> AI Tools</span>
+                    <span class="skill-tag"><i class="fa fa-terminal"></i> Prompt Engineering</span>
+                    <span class="skill-tag"><i class="fa fa-brain"></i> AI-Assisted Development</span>
+                    <span class="skill-tag"><i class="fa fa-microchip"></i> Machine Learning</span>
+                    <span class="skill-tag"><i class="fa fa-gears"></i> Data Processing</span>
+                    <span class="skill-tag"><i class="fa fa-spider"></i> Data Scraping</span>
+                    <span class="skill-tag"><i class="fa fa-arrows-spin"></i> Workflow Automation</span>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="skill-category"><i class="fa fa-chart-line ic-gold"></i> Digital Marketing</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fa fa-magnifying-glass-chart"></i> SEO</span>
+                    <span class="skill-tag"><i class="fa fa-link"></i> On-Page &amp; Off-Page SEO</span>
+                    <span class="skill-tag"><i class="fa fa-code"></i> Technical SEO</span>
+                    <span class="skill-tag"><i class="fa fa-bullhorn"></i> Digital Advertising</span>
+                    <span class="skill-tag"><i class="fa fa-share-nodes"></i> Social Media Advertising</span>
+                    <span class="skill-tag"><i class="fa fa-envelope-open-text"></i> Email Marketing</span>
+                    <span class="skill-tag"><i class="fa fa-users"></i> Lead Generation</span>
+                    <span class="skill-tag"><i class="fa fa-chart-line"></i> Marketing Automation</span>
+                </div>
+
+                <!-- Systems & Tools -->
+                <div class="skill-category"><i class="fa fa-desktop ic-teal"></i> Systems &amp; Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag"><i class="fab fa-windows"></i> Windows</span>
+                    <span class="skill-tag"><i class="fab fa-linux"></i> Kali Linux</span>
+                    <span class="skill-tag"><i class="fab fa-ubuntu"></i> Ubuntu</span>
+                    <span class="skill-tag"><i class="fa fa-compact-disc"></i> OS Installation</span>
+                    <span class="skill-tag"><i class="fa fa-code"></i> VS Code</span>
+                    <span class="skill-tag"><i class="fab fa-android"></i> Android Studio</span>
+                    <span class="skill-tag"><i class="fa fa-server"></i> XAMPP</span>
+                    <span class="skill-tag"><i class="fa fa-server"></i> WAMP</span>
+                    <span class="skill-tag"><i class="fa fa-file-word"></i> MS Office</span>
+                    <span class="skill-tag"><i class="fa fa-calculator"></i> Tally ERP 9</span>
+                    <span class="skill-tag"><i class="fa fa-shop"></i> Vyapar</span>
+                    <span class="skill-tag"><i class="fa fa-palette"></i> Canva</span>
+                    <span class="skill-tag"><i class="fa fa-image"></i> Adobe Photoshop</span>
+                    <span class="skill-tag"><i class="fa fa-film"></i> Filmora</span>
+                    <span class="skill-tag"><i class="fa fa-scissors"></i> CapCut</span>
+                </div>
+
+                <!-- Professional Strengths -->
+                <div class="section-title" style="--accent:#22c55e;">
+                    <i class="fa fa-medal"></i> Professional Strengths
+                </div>
+                <div class="strength-tags">
+                    <span class="strength-tag"><i class="fa fa-crown"></i> Educational Leadership</span>
+                    <span class="strength-tag"><i class="fa fa-school"></i> School Administration</span>
+                    <span class="strength-tag"><i class="fa fa-comments"></i> English Communication</span>
+                    <span class="strength-tag"><i class="fa fa-person-chalkboard"></i> Presentation Skills</span>
+                    <span class="strength-tag"><i class="fa fa-microphone"></i> Public Speaking</span>
+                    <span class="strength-tag"><i class="fa fa-comment-dots"></i> Technical Communication</span>
+                    <span class="strength-tag"><i class="fa fa-lightbulb"></i> Problem-Solving</span>
+                    <span class="strength-tag"><i class="fa fa-arrows-rotate"></i> Adaptability</span>
+                    <span class="strength-tag"><i class="fa fa-plug"></i> Technology Integration</span>
+                </div>
+
+                <!-- References -->
+                <div class="section-title" style="--accent:#ec4899;">
+                    <i class="fa fa-user-friends"></i> References
+                </div>
+                <p class="ref-text">
+                    <i class="fa fa-envelope-open-text"></i>
+                    Available upon request
+                </p>
+
+            </div>
+
+        </div>
     </div>
 
-    <footer class="cover__footer">
-      <span>Curriculum Vitae</span>
-      <span class="cover__dot" aria-hidden="true"></span>
-      <span id="coverYear">2026</span>
-    </footer>
-  </section>
-
-  <!-- ---------------- RESUME PAGE ---------------- -->
-  <section class="page resume-page" id="resumePage" aria-label="Resume">
-
-    <header class="resume-header">
-      <div class="resume-header__text">
-        <h1 class="resume-header__name" id="resumeName">MUZAHIDUL ISLAM</h1>
-        <p class="resume-header__identity" id="resumeIdentity"></p>
-      </div>
-      <img id="resumePhoto" class="resume-header__photo" src="assets/image/profile.png"
-           alt="Portrait of Muzahidul Islam">
-    </header>
-
-    <ul class="contact-row" id="resumeContact"></ul>
-
-    <!-- PROFILE -->
-    <section class="section" aria-labelledby="h-profile">
-      <h2 class="section__title" id="h-profile">
-        <i class="fa-solid fa-user-tie" aria-hidden="true"></i>Professional Profile
-      </h2>
-      <p class="profile-text" id="profileText"></p>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section" aria-labelledby="h-experience">
-      <h2 class="section__title" id="h-experience">
-        <i class="fa-solid fa-briefcase" aria-hidden="true"></i>Professional Experience
-      </h2>
-      <div id="experienceList" class="timeline"></div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section" aria-labelledby="h-education">
-      <h2 class="section__title" id="h-education">
-        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Education
-      </h2>
-      <div id="educationList" class="edu-list"></div>
-    </section>
-
-    <!-- CORE SKILLS -->
-    <section class="section" aria-labelledby="h-skills">
-      <h2 class="section__title" id="h-skills">
-        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>Core Skills
-      </h2>
-      <div id="skillsList" class="skill-groups"></div>
-    </section>
-
-    <!-- COMPETENCIES + TECHNICAL SKILLS -->
-    <div class="grid-2">
-      <section class="section" aria-labelledby="h-competencies">
-        <h2 class="section__title" id="h-competencies">
-          <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Core Competencies
-        </h2>
-        <ul class="tag-list" id="competenciesList"></ul>
-      </section>
-
-      <section class="section" aria-labelledby="h-tech">
-        <h2 class="section__title" id="h-tech">
-          <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>Technical Skills
-        </h2>
-        <div id="techSkillsList" class="bars"></div>
-      </section>
-    </div>
-
-    <!-- CERTIFICATIONS + LANGUAGES -->
-    <div class="grid-2">
-      <section class="section" aria-labelledby="h-certs">
-        <h2 class="section__title" id="h-certs">
-          <i class="fa-solid fa-certificate" aria-hidden="true"></i>Certifications
-        </h2>
-        <ul class="cert-list" id="certificationsList"></ul>
-      </section>
-
-      <section class="section" aria-labelledby="h-languages">
-        <h2 class="section__title" id="h-languages">
-          <i class="fa-solid fa-language" aria-hidden="true"></i>Languages
-        </h2>
-        <ul class="lang-list" id="languagesList"></ul>
-      </section>
-    </div>
-
-    <!-- STRENGTHS -->
-    <section class="section" aria-labelledby="h-strengths">
-      <h2 class="section__title" id="h-strengths">
-        <i class="fa-solid fa-star" aria-hidden="true"></i>Professional Strengths
-      </h2>
-      <ul class="tag-list tag-list--strengths" id="strengthsList"></ul>
-    </section>
-
-    <!-- REFERENCES -->
-    <section class="section" aria-labelledby="h-references">
-      <h2 class="section__title" id="h-references">
-        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>References
-      </h2>
-      <p class="references-text" id="referencesText"></p>
-    </section>
-
-  </section>
-</main>
-
-<!-- =========================================================
-     FLOATING ACTION BUTTONS  (never printed)
-     ========================================================= -->
-<div class="floating-actions no-print" role="group" aria-label="Quick actions">
-  <button id="fabEdit"  class="floating-actions__button" type="button" title="Edit resume"   aria-label="Edit resume">
-    <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></button>
-  <button id="fabPrint" class="floating-actions__button" type="button" title="Print resume"  aria-label="Print resume">
-    <i class="fa-solid fa-print" aria-hidden="true"></i></button>
-  <button id="fabPdf"   class="floating-actions__button" type="button" title="Save as PDF"   aria-label="Save as PDF">
-    <i class="fa-solid fa-file-pdf" aria-hidden="true"></i></button>
-  <button id="fabShare" class="floating-actions__button floating-actions__button--accent" type="button" title="Share resume"
-          aria-label="Share resume" aria-haspopup="true" aria-expanded="false" aria-controls="shareMenu">
-    <i class="fa-solid fa-share-nodes" aria-hidden="true"></i></button>
-</div>
-
-<!-- =========================================================
-     SHARE MENU
-     ========================================================= -->
-<div class="share-menu no-print" id="shareMenu" role="menu" aria-label="Share resume" hidden>
-  <button class="share-item" type="button" role="menuitem" data-share="native" hidden>
-    <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share via device</button>
-  <button class="share-item" type="button" role="menuitem" data-share="whatsapp">
-    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</button>
-  <button class="share-item" type="button" role="menuitem" data-share="facebook">
-    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook</button>
-  <button class="share-item" type="button" role="menuitem" data-share="linkedin">
-    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</button>
-  <button class="share-item" type="button" role="menuitem" data-share="x">
-    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X / Twitter</button>
-  <button class="share-item" type="button" role="menuitem" data-share="email">
-    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</button>
-  <button class="share-item" type="button" role="menuitem" data-share="copy">
-    <i class="fa-solid fa-link" aria-hidden="true"></i> Copy Link</button>
-</div>
-
-<!-- =========================================================
-     EDITOR PANEL
-     ========================================================= -->
-<aside class="editor-panel no-print" id="editorPanel" aria-hidden="true" aria-label="Resume editor">
-  <header class="editor-panel__head">
-    <h2><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i> Edit Resume</h2>
-    <button id="btnCloseEditor" class="icon-btn" type="button" aria-label="Close editor">
-      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    <button class="print-btn" onclick="window.print()">
+        <i class="fa fa-print"></i>
+        <span>Print / Save as PDF</span>
     </button>
-  </header>
 
-  <div class="editor-panel__body" id="editorBody"></div>
+    <script>
+        console.log("%c🚀 Muzahidul Islam — Executive Resume", "font-size:20px; font-weight:bold; color:#0b1c3d;");
+        console.log("%c📄 Click the Print button to save as PDF", "font-size:14px; color:#5b6b85;");
+    </script>
 
-  <footer class="editor-panel__foot">
-    <button id="btnSave" class="btn btn--primary" type="button">
-      <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Save Changes
-    </button>
-    <button id="btnReset" class="btn btn--danger" type="button">
-      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
-    </button>
-  </footer>
-</aside>
-
-<div class="toast no-print" id="toast" role="status" aria-live="polite"></div>
-
-<input type="file" id="photoInput" accept="image/*" hidden>
-
-<script src="app.js"></script>
 </body>
 </html>
