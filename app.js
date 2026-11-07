@@ -58,7 +58,7 @@
   const DEFAULT_DATA = {
     personal: {
       name:       'MUZAHIDUL ISLAM',
-      coverTitle: 'PRINCIPAL · EDUCATOR · ENGINEER',
+      coverTitle: 'EDUCATOR · ENGINEER',
       identity:   'English Teacher · Computer Science Teacher · Software Engineer',
       statement:  'Education professional holding an MCA, an MA in English, and a background in software engineering, with extensive experience across academic leadership, English teaching, Computer Science education, and software development. Unites classroom practice with modern technical expertise.',
       address:    'No 2 Kuwari Pukhuri, Kharupetia, Darrang, Assam, India - 784115',
@@ -69,7 +69,7 @@
       github:     'muzahid-tech'
     },
 
-    profile: 'MCA, Software Engineer and MA in English qualified education professional with extensive experience in academic leadership, English teaching, Computer Science education, and software development. Currently serving as Principal and English Teacher at Darrang Royal Academy (DRA). Combines deep expertise in English grammar and literature, academic writing, school management, digital education, programming, web development, databases, APIs, AI tools, and emerging technologies. Committed to strengthening academic standards through disciplined leadership, technology-enabled learning, and practical, project-based education.',
+    profile: 'MCA, Software Engineer and MA in English qualified education professional with extensive experience in English teaching, Computer Science education, and software development. Holds an MA in English, an MCA, a qualification in Software Engineering with CIT, a BCA, and a BA in English. Currently working as an English Teacher at Prime Institute. Combines deep expertise in English grammar and literature, academic writing, digital education, programming, web development, databases, APIs, AI tools, and emerging technologies. Committed to strengthening academic standards through technology-enabled learning and practical, project-based education.',
 
     competencies: [
       'Educational Leadership',
@@ -106,13 +106,13 @@
 
     experience: [
       {
-        role: 'Principal & English Teacher',
+        role: 'English Teacher',
         date: 'Present',
-        org:  'Darrang Royal Academy (DRA), Darrang, Assam',
+        org:  'Prime Institute',
         bullets: [
-          'Provide academic and administrative leadership, overseeing school operations, academic planning, teacher coordination, student discipline, and institutional development.',
-          'Lead English instruction in Grammar, Literature, Writing, Reading, and Comprehension while supporting academic performance and examination preparation.',
-          'Promote digital classrooms, modern teaching practices, effective school management, and improved student engagement and learning outcomes.'
+          'Teach English Grammar, Literature, Writing, Reading, and Comprehension, preparing lessons and learning materials to support student progress.',
+          'Support students with academic performance and examination preparation through modern, engaging, and technology-enabled teaching practices.',
+          'Encourage student participation and strengthen English language skills through classroom activities and effective instruction.'
         ]
       },
       {
@@ -167,7 +167,7 @@
     ],
 
     education: [
-      { institution: 'IGNOU',                     date: '2026',        degree: 'Master of Arts (MA) in English' },
+      { institution: 'Mangalayatan University',   date: '2023 – 2025', degree: 'Master of Arts (MA) in English' },
       { institution: 'Bengaluru University',      date: '2023 – 2025', degree: 'Master of Computer Applications (MCA)' },
       { institution: 'WAP Institute',             date: '2021 – 2023', degree: 'Software Engineering with CIT' },
       { institution: 'Manipal University Jaipur', date: '2019 – 2022', degree: 'Bachelor of Computer Applications (BCA)' },
